@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.32/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body ng-controller="MainCtrl">
+  <h1>Matrix Listing!</h1>
+
+  <div>
+    <owl-carousel class="owl-carousel" data-options="{items:4, nav: true}">
+      <div ng-repeat="item in matrix">
+        <p>{{item.airlineName.Name}}</p>
+      </div>
+    </owl-carousel>
+  </div>
+
+  <button ng-click="changeItem()">Click</button>
+
+</body>
+
+</html>
